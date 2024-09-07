@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prdiction Algo</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/CSS/style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <!-- <h2>{{request}}</h2> -->
+        <div class="formbox">
+            <form action="/predict" method="post">
+                <div class="input_box">
+                    <label for="sepal_length"> Sepal Length</label>
+                    <input type="number" name="sepal_length" id="sepal_length" step="any" required>
+                </div>
+                
+                <div class="input_box">
+                    <label for="petal_length"> Petal Length</label>
+                    <input type="number" name="petal_length" id="petal_length" step="any" required>
+                </div>
+                <div class="input_box">
+                    <label for="sepal_width"> Sepal Width</label>
+                    <input type="number" name="sepal_width" id="sepal_width" step="any" required>
+                </div>
+                <div class="input_box last">
+                    <label for="petal_width"> Petal Length</label>
+                    <input type="number" name="petal_width" id="petal_width" step="any" required>
+                </div>
+                <button type="submit">
+                    Predict
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
